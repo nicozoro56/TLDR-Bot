@@ -153,3 +153,23 @@ def on_messageAutoMod(bot, message, guildData):
                 #asyncio.run_coroutine_threadsafe(unmuteuser(bot, message, guildData), bot.autoModLoop)
                 bot.save()
                 return
+            case "banuser":
+                banUser(bot, message, guildData, mots)
+                #asyncio.run_coroutine_threadsafe(unmuteuser(bot, message, guildData), bot.autoModLoop)
+                bot.save()
+                return
+           case "unbanuser":
+                unbanUser(bot, message, guildData, mots)
+                #asyncio.run_coroutine_threadsafe(unmuteuser(bot, message, guildData), bot.autoModLoop)
+                bot.save()
+                return
+            case "kickuser":
+                kickUser(bot, message, guildData, mots)
+                #asyncio.run_coroutine_threadsafe(unmuteuser(bot, message, guildData), bot.autoModLoop)
+                bot.save()
+                return
+            case "getuserinfo":
+                getUserInfo(bot, message, guildData, mots)
+                #asyncio.run_coroutine_threadsafe(unmuteuser(bot, message, guildData), bot.autoModLoop)
+                bot.save()
+                return
